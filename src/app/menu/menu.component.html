@@ -1,0 +1,14 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <div fxFlex="25">
+    <mat-form-field>
+      <mat-select [formControl]="particleTypeCtrl" >
+        <mat-option *ngFor="let opt of weather" [value]="opt">
+          {{opt}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div fxFlex="25">
+    <button mat-button mat-raised-button> Play</button>
+  </div>
+</div>
