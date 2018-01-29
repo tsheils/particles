@@ -1,5 +1,5 @@
-<div fxLayout="row" fxLayoutAlign="center center">
-  <div fxFlex="25">
+<div fxLayout="row" fxLayoutAlign="space-around center">
+  <div fxFlex = "auto">
     <mat-form-field>
       <mat-select [formControl]="particleTypeCtrl" >
         <mat-option *ngFor="let opt of weather" [value]="opt">
@@ -7,8 +7,7 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-  </div>
-  <div fxFlex="25">
-    <button mat-button mat-raised-button> Play</button>
+    &nbsp;
+    <button class="toggle" mat-button mat-raised-button (click)="toggleAnimation()"><mat-icon>{{status ? 'pause': 'play_arrow'}}</mat-icon></button>
   </div>
 </div>

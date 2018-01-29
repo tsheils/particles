@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import { ScreenComponent } from './screen/screen.component';
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
-import {OptionsService} from './services/options.service';
+import {ParticleTypeService} from './services/particle-type.service';
 import {MaterialModule} from '../assets/material/material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {AnimationToggleService} from './services/animation-toggle.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     FlexLayoutModule
   ],
   providers: [
-    OptionsService
+    ParticleTypeService,
+    AnimationToggleService
   ],
   bootstrap: [AppComponent]
 })
